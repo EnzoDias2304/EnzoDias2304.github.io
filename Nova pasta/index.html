@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+	<head> 
+
+		<meta charset="utf-8">
+
+		<link href="https://fonts.googleapis.com/css?family=Baloo+Chettan" rel="stylesheet">
+
+	</head>
+	<body>
+
+		<script> 
+
+			function textPass() {
+				document.write("VOCÊ CONSEGUIU PASSAAAARR!!!!!");
+				document.body.style.fontSize = "300%";
+				document.body.style.color = "green";
+				document.body.style.fontFamily = "Baloo Chettan";
+			}
+
+			function textPass2() {
+				document.write("Puta merda em... Por pouco mas foi kkkj");
+				document.body.style.fontSize = "300%"
+  				document.body.style.fontFamily = "Baloo Chettan";
+  				document.body.style.color = "green";
+  			}
+
+			function imagePass() {
+  				document.body.style.backgroundImage = "url('columbine.jpg')";
+  				document.body.style.backgroundRepeat = "no-repeat";
+  				document.body.style.backgroundSize = "100%";
+  			}
+
+  			
+
+  			function textNot() {
+  				document.write("FRACASSADO, VAI ESTUDAR MAIS SEU VAGABUNDO!!!!!");
+  				document.body.style.fontSize = "300%"
+  				document.body.style.fontFamily = "Baloo Chettan";
+  				document.body.style.color = "red";
+
+  			}
+
+  			function imageNot() {
+  				document.body.style.backgroundImage = "url(maradona.jpg)";
+  				document.body.style.backgroundSize = "100%";
+  				document.body.style.backgroundRepeat = "no-repeat";
+  			}
+
+			var n1 = parseFloat(prompt("Qual sua primeira nota?"));
+			var n2 = parseFloat(prompt("Qual sua segunda nota?"));
+
+			var media = (n1 + n2) / 2;
+			alert("Essa é sua média: " + media);
+			if (media >= 6) {
+				alert("Você foi aprovado, parabens!!!");
+
+				textPass();
+
+				imagePass();
+			}
+
+			else {
+				alert("Você ficou de recuperação");
+
+				var nr = parseFloat(prompt("Qual foi sua nota na recuperação?"));
+
+				var mediaR = (nr + media) / 2;
+
+				alert("Essa foi sua media depois da recuperação: " + mediaR);
+
+				if (mediaR >= 5) {
+					alert("Parabens, você passou!!!");
+
+					textPass2();
+
+					imagePass();
+				}
+
+				else {
+					alert("Sinto muito, mas você não passou...");
+
+					textNot();
+
+					imageNot();
+				}
+			}
+			
+		</script>
+
+	</body>
+</html>
